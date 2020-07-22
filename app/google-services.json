@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "73209953065",
+    "firebase_url": "https://daftar-produk-warung.firebaseio.com",
+    "project_id": "daftar-produk-warung",
+    "storage_bucket": "daftar-produk-warung.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:73209953065:android:cba5244b512e2d481a5538",
+        "android_client_info": {
+          "package_name": "com.rapandroid.dpw"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "73209953065-7f5vkmucj3v6g6ah7fe1i6m9ut5f08qj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rapandroid.dpw",
+            "certificate_hash": "7c65082ae648addbc42835d510d486be4f17da4d"
+          }
+        },
+        {
+          "client_id": "73209953065-tmav39tvnvk0ern0unm9vms7n3npag3c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCI4An5yiRXkKGaBYGLH89iFRxtZmpLNYI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "73209953065-tmav39tvnvk0ern0unm9vms7n3npag3c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

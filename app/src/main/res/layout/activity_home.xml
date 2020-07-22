@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#f3f3f3"
+    tools:context=".HomeActivity">
+
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/rl_search"-->
+<!--        a ndroid:orientation="horizontal">-->
+
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            android:layout_width="290dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentLeft="true"-->
+<!--            android:hint="Cari disini">-->
+
+<!--            <com.google.android.material.textfield.TextInputEditText-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/et_search"/>-->
+
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/btn_seacrh"-->
+<!--            android:layout_width="40dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:layout_alignParentTop="true"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:background="@drawable/background_profile"-->
+<!--            android:src="@drawable/ic_search_white_24dp" />-->
+
+<!--    </RelativeLayout>-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp">
+<!--        android:layout_below="@id/rl_search"-->
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rc_product"/>
+
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fab_add"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="15dp"
+        android:src="@drawable/ic_add_white_24dp"
+        app:fabSize="normal"/>
+
+</RelativeLayout>
