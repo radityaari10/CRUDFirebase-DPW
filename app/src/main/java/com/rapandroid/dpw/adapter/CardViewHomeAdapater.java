@@ -2,19 +2,26 @@ package com.rapandroid.dpw.adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.MimeTypeMap;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.rapandroid.dpw.FormActivity;
 import com.rapandroid.dpw.HomeActivity;
@@ -37,6 +44,7 @@ public class CardViewHomeAdapater extends RecyclerView.Adapter<CardViewHomeAdapa
 //        FirebaseUser mUser = FirebaseAuth.getInstance().getCurrentUser();
 //        String uId = mUser.getUid();
 //        mDatabase = FirebaseDatabase.getInstance().getReference().child("daftar-produk-warung").child(uId);
+        mStorage = FirebaseStorage.getInstance().getReference();
     }
 
 
@@ -55,7 +63,7 @@ public class CardViewHomeAdapater extends RecyclerView.Adapter<CardViewHomeAdapa
         holder.tvPrice.setText("Rp. "  + String.valueOf(homeModel.getPrice()));
         holder.tvDesc.setText(homeModel.getDesc());
 //        holder.tvId.setText(homeModel.getId());
-
+        getImage("Images/" + homeModel.getId() +".jpg", holder.ivProductList);
         holder.cvProduct.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -64,6 +72,7 @@ public class CardViewHomeAdapater extends RecyclerView.Adapter<CardViewHomeAdapa
                 i.putExtra("price", String.valueOf(homeModel.getPrice()));
                 i.putExtra("desc", homeModel.getDesc());
                 i.putExtra("id", homeModel.getId() );
+                i.putExtra("img", "Images/" + homeModel.getId() +".jpg");
                 context.startActivity(i);
             }
         });
@@ -78,6 +87,7 @@ public class CardViewHomeAdapater extends RecyclerView.Adapter<CardViewHomeAdapa
     public class HomeViewHolder extends RecyclerView.ViewHolder{
         CardView cvProduct;
         TextView tvName, tvPrice, tvDesc, tvId;
+        ImageView ivProductList;
 
         public HomeViewHolder(View view) {
             super(view);
@@ -85,7 +95,25 @@ public class CardViewHomeAdapater extends RecyclerView.Adapter<CardViewHomeAdapa
             tvPrice = view.findViewById(R.id.tv_price);
             tvDesc = view.findViewById(R.id.tv_desc);
 //            tvId = view.findViewById(R.id.tv_id);
+            ivProductList = view.findViewById(R.id.iv_product_list);
             cvProduct = view.findViewById(R.id.cv_product);
         }
     }
+
+    public void getImage(String data, final ImageView f){
+        mStorage.child(data).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+            @Override
+            public void onSuccess(Uri uri) {
+                Glide.with(context)
+                        .load(uri)
+                        .into(f);
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+
+            }
+        });
+    }
+
 }

@@ -59,7 +59,7 @@ public class HomeActivity extends AppCompatActivity {
         final FirebaseUser mUser = FirebaseAuth.getInstance().getCurrentUser();
 
         String uId = mUser.getUid();
-//
+
         mDatabase = FirebaseDatabase.getInstance().getReference().child("daftar-produk-warung").child(uId);
 
         mDatabase.keepSynced(true);
@@ -125,7 +125,6 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
     }
-
 
     public boolean onCreateOptionsMenu(Menu mn){
         MenuInflater inflater = getMenuInflater();
