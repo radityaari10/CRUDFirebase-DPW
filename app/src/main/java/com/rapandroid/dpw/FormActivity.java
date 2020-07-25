@@ -60,7 +60,7 @@ public class FormActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         final Drawable panah = ContextCompat.getDrawable(this, R.drawable.ic_arrow_back_black_24dp);
-        panah.setColorFilter(ContextCompat.getColor(this, R.color.black), PorterDuff.Mode.SRC_ATOP);
+        panah.setColorFilter(ContextCompat.getColor(this, R.color.white), PorterDuff.Mode.SRC_ATOP);
         getSupportActionBar().setHomeAsUpIndicator(panah);
 
         mAuth = FirebaseAuth.getInstance();

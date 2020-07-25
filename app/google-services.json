@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "73209953065",
-    "firebase_url": "https://daftar-produk-warung.firebaseio.com",
-    "project_id": "daftar-produk-warung",
-    "storage_bucket": "daftar-produk-warung.appspot.com"
+    "project_number": "252545583059",
+    "firebase_url": "https://dpwfirebaseproject.firebaseio.com",
+    "project_id": "dpwfirebaseproject",
+    "storage_bucket": "dpwfirebaseproject.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:73209953065:android:cba5244b512e2d481a5538",
+        "mobilesdk_app_id": "1:252545583059:android:f436afb9f425df91581126",
         "android_client_info": {
           "package_name": "com.rapandroid.dpw"
         }
       },
       "oauth_client": [
         {
-          "client_id": "73209953065-7f5vkmucj3v6g6ah7fe1i6m9ut5f08qj.apps.googleusercontent.com",
+          "client_id": "252545583059-ejd2hqvsnrblop9agb09ecgktqtgcif0.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.rapandroid.dpw",
@@ -23,20 +23,20 @@
           }
         },
         {
-          "client_id": "73209953065-tmav39tvnvk0ern0unm9vms7n3npag3c.apps.googleusercontent.com",
+          "client_id": "252545583059-gv1pnr496ctbsbi44v4p8r4pb5ghcg1i.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCI4An5yiRXkKGaBYGLH89iFRxtZmpLNYI"
+          "current_key": "AIzaSyBY14JJquDfgxs6gdpoRQ34apuAnWfTUxQ"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "73209953065-tmav39tvnvk0ern0unm9vms7n3npag3c.apps.googleusercontent.com",
+              "client_id": "252545583059-gv1pnr496ctbsbi44v4p8r4pb5ghcg1i.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -148,7 +148,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
                         android:id="@+id/iv_product"
-                        android:background="@android:color/darker_gray"/>
+                        android:background="@drawable/bg_image"/>
 
                     <Button
                         android:layout_width="wrap_content"
@@ -178,7 +178,8 @@
                         android:layout_margin="10dp"
                         android:text="Simpan"
                         android:textAppearance="?android:textAppearanceMedium"
-                        android:textColor="@android:color/white" />
+                        android:textColor="@android:color/white"
+                        android:background="@drawable/btn_primary"/>
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -193,7 +194,8 @@
                         android:layout_margin="10dp"
                         android:text="Batal"
                         android:textAppearance="?android:textAppearanceMedium"
-                        android:textColor="@android:color/white" />
+                        android:textColor="@android:color/white"
+                        android:background="@drawable/btn_danger"/>
                 </RelativeLayout>
             </LinearLayout>
         </LinearLayout>
